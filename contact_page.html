@@ -4,21 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <nav class="header_menu">
-        <ul class="header_list">
-          <li><a href="/new-site/index.html">Home Page</a></li>
-          <li><a href="/new-site/attractions.html">Contact Page</a></li>
-          <li><a href="/new-site/events.html">Interactive Map</a></li>
-          <li><a href="/new-site/contact_us.html">Image Gallery</a></li>
-          <li><a href="/new-site/events.html">Drawing</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
-    <footer></footer>
+    <h1>Contact Page</h1>
+    <ul class="navigation">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="interactive_map.html">Interactive map</a></li>
+      <li><a href="image_gallery.html">Image gallery</a></li>
+      <li><a href="drawing.html">Drawing</a></li>
+      <li><a href="local_storage.html">Local Storage</a></li>
+      <li><a href="remote_source.html">Remote Source</a></li>
+      <li><a href="animation_css.html">Animation CSS</a></li>
+      <li><a href="chat.html">Chat</a></li>
+      <li><a href="/contact_page.html">Contact Page</a></li>
+    </ul>
+
+    <h2>Contact Us</h2>
+
+    <p>
+      We make bespoke balloons of all shapes and sizes, for all occasions and
+      purposes.
+    </p>
+
+    Please feel free to
+    <a href="mailto:balloons@example.com">send us an email</a> if you would like
+    to know more about our products
+<p>
+    <form action="process.php">
+        <div class="form-control">
+        <label for="fullname">Your full name</label>
+        <input id="fullname" type="text" name="fullname" />
+        </div>
+
+        <div class="form-control">
+        <label for="sername">Your full sername</label>
+        <input id="sername" type="text" name="sername" />
+        </div>
+
+        <div class="form-control">
+        <label for="email">Your Email</label>
+        <input id="email" type="text" name="email" />
+        </div>
+
+        <div class="form-control">
+        <label for="age">Your age</label>
+        <input id="age" type="number" name="age" min="18" max="99"/>
+        </div>
+
+        <div class="form-control">
+        <label for="story">Tell us your story</label>
+        <textarea id="story" type="story">
+        </textarea>
+        </div>
+        
+        <input class="buttonGO" type="submit" value="GO!">
+        
+      </form>
+</p>
+<script>
+  const trigger = document.querySelector(".trigger");
+  const target = document.querySelector(".target");
+
+  trigger.addEventListener("click", changeTarget);
+
+  function changeTarget() {
+    target.classList.toggle("active-target");
+  }
+</script>
   </body>
 </html>

@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8a8683;
+}
+@media screen and (min-width: 37.5em) {
+  body {
+    margin: 0px;
+  }
+}
+
+h1 {
+  font-size: 3em;
+  color: rgb(9, 7, 10);
+  font-weight: normal;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid #4c0072;
+  background-color: #f0e6f5;
+  padding: 0.5em;
+  margin-bottom: 0em;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.5em;
+  background-color: #f0e6f5;
+  padding: 0.25em 0.5em;
+}
+
+h2,
+h3,
+h4 {
+  color: #99007f;
+}
+
+h3 {
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid #99007f;
+}
+
+a:link {
+  color: #660099;
+}
+a:visited {
+  color: #876399;
+}
+a:hover {
+  color: #339900;
+}
+
+.intro {
+  font-size: 1.5em;
+  color: #72005f;
+  font-style: italic;
+}
+
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #d9eece;
+  border: 1px #4c0072 solid;
+}
+@media screen and (min-width: 37.5em) {
+  .navigation {
+    display: flex;
+  }
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #226500;
+  font-weight: bold;
+  display: block;
+  padding: 0.75em 1em;
+}
+@media screen and (min-width: 37.5em) {
+  .navigation a {
+    display: flex;
+  }
+}
+.navigation a:hover {
+  background-color: #bdeaa6;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  width: 30em;
+}
+
+.form-control {
+  margin-bottom: 1.5em;
+}
+
+textarea {
+  min-height: 10em;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 0.5em;
+}
+
+.buttonGO {
+  height: 40px;
+  color: #4c0072;
+  background-color: #d9eece;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.buttonGO:hover {
+  width: 300px;
+  background-color: #d83706;
+  color: #ffffff;
+  transition-duration: 2s;
+  transform: scale(1.3);
+}
