@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #8a8683;
+  color: #867e77;
 }
 @media screen and (min-width: 37.5em) {
   body {
@@ -60,10 +60,9 @@ a:hover {
   background-color: #d9eece;
   border: 1px #4c0072 solid;
 }
-@media screen and (min-width: 37.5em) {
-  .navigation {
-    display: flex;
-  }
+
+.navigation li {
+  display: inline-block;
 }
 
 .navigation a {
@@ -73,13 +72,18 @@ a:hover {
   display: block;
   padding: 0.75em 1em;
 }
-@media screen and (min-width: 37.5em) {
-  .navigation a {
-    display: flex;
-  }
-}
+
 .navigation a:hover {
   background-color: #bdeaa6;
+}
+
+.selected-link {
+  background-color: #e7c2c2;
+  text-decoration: none;
+  color: #cb3737;
+  font-weight: bold;
+  display: block;
+  padding: 0.75em 1em;
 }
 
 label,
@@ -143,17 +147,82 @@ textarea {
 
 /* Contact page */
 
-@media only screen and (max-width: 400px) {
+/* Image gallery */
+.full-img {
+  position: relative;
+  display: block;
+  max-width: 640px;
+  height: 100%;
+}
+.full-img img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 640px;
+  height: 427px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  border: 0;
+  background: rgba(150, 150, 150, 0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+.thumb-bar {
+  display: block;
+}
+
+.thumb-bar img {
+  width: 128px;
+  float: left;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .thumb-bar img {
+    width: 60px;
+    height: 45px;
+  }
+  .thumb-bar {
+    display: column;
+  }
+}
+
+/* IMG map */
+.mapmap {
+  background-image: url(/images/img_map/background.png);
+  background-size: cover; /* или background-size: 100% 100%; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 640px;
+  height: 100%;
+}
+
+.mapmap img {
+  height: 100%;
+  width: 100%;
+}
+
+/* ------------------------------------ */
+
+@media only screen and (max-width: 600px) {
   li.selected-link {
     width: 70%;
   }
   .page-container {
     padding: 0.5em;
   }
-  .navigation li {
-    text-align: center;
-    width: 95%;
-  }
+
   h1 {
     font-size: 2em;
     text-align: center;
@@ -183,5 +252,12 @@ textarea {
 
   h2 {
     font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .navigation li {
+    text-align: center;
+    width: 95%;
   }
 }

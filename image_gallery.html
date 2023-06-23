@@ -12,7 +12,7 @@
     <ul class="navigation">
       <li><a href="index.html">About Me</a></li>
       <li><a href="interactive_map.html">Interactive map</a></li>
-      <li><a href="image_gallery.html">Image gallery</a></li>
+      <li class="selected-link">Image gallery</li>
       <li><a href="drawing.html">Drawing</a></li>
       <li><a href="local_storage.html">Local Storage</a></li>
       <li><a href="remote_source.html">Remote Source</a></li>
@@ -26,10 +26,54 @@
       We make bespoke balloons of all shapes and sizes, for all occasions and
       purposes.
     </p>
-    <p>
-      From <em>helium-filled party balloons</em> to <em>hot-air balloons</em>,
-      we have it covered. So, whether you are celebrating a birthday or flying
-      across the channel, give us a call!
-    </p>
+    <h1>Gallery example</h1>
+
+    <div class="full-img">
+      <img class="displayed-img" src="/images/galery_images/pic1.jpg" />
+      <div class="overlay"></div>
+      <button class="dark">Darken</button>
+    </div>
+
+    <div class="thumb-bar"></div>
+    <script src="/JS/image_galery.js"></script>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>IMG map example</h1>
+
+    <div class="mapmap">
+      <img
+        src="/images/img_map/planets.png"
+        alt="Workplace"
+        usemap="#workmap"
+      />
+      <map name="workmap">
+        <area
+          shape="circle"
+          coords="77, 173, 42"
+          alt="Mercury"
+          href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+        />
+        <area
+          shape="circle"
+          coords="228, 173, 96"
+          alt="Venus"
+          href="https://en.wikipedia.org/wiki/Venus"
+        />
+        <area
+          shape="circle"
+          coords="437, 173, 97.5"
+          alt="Earth"
+          href="https://en.wikipedia.org/wiki/Earth"
+        />
+        <area
+          shape="circle"
+          coords="603, 169, 55"
+          alt="Mars"
+          href="https://en.wikipedia.org/wiki/Mars"
+        />
+      </map>
+    </div>
   </body>
 </html>
