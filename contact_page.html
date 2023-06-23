@@ -31,47 +31,32 @@
     Please feel free to
     <a href="mailto:balloons@example.com">send us an email</a> if you would like
     to know more about our products
-<p>
-    <form action="process.php">
+    <div class="page-container">
+      <h1>Form Validation</h1>
+
+      <form id="myForm" action="" novalidate>
         <div class="form-control">
-        <label for="fullname">Your full name</label>
-        <input id="fullname" type="text" name="fullname" />
+          <label for="fullName">Your full name</label>
+          <input required id="fullName" type="text" name="full_name" />
+          <div class="field-error"></div>
         </div>
 
         <div class="form-control">
-        <label for="sername">Your full sername</label>
-        <input id="sername" type="text" name="sername" />
+          <label for="emailAddress">Your email</label>
+          <input required id="emailAddress" type="email" name="email_address" />
+          <div class="field-error"></div>
         </div>
 
-        <div class="form-control">
-        <label for="email">Your Email</label>
-        <input id="email" type="text" name="email" />
+        <div class="story_control">
+          <label for="story">Massage</label>
+          <textarea id="story" name="story"></textarea>
+          <div id="storyOutput" class="output"></div>
         </div>
 
-        <div class="form-control">
-        <label for="age">Your age</label>
-        <input id="age" type="number" name="age" min="18" max="99"/>
-        </div>
-
-        <div class="form-control">
-        <label for="story">Tell us your story</label>
-        <textarea id="story" type="story">
-        </textarea>
-        </div>
-        
-        <input class="buttonGO" type="submit" value="GO!">
-        
+        <input type="submit" value="Go!" />
       </form>
-</p>
-<script>
-  const trigger = document.querySelector(".trigger");
-  const target = document.querySelector(".target");
+    </div>
 
-  trigger.addEventListener("click", changeTarget);
-
-  function changeTarget() {
-    target.classList.toggle("active-target");
-  }
-</script>
+    <script src="/JS/form-validation.js"></script>
   </body>
 </html>

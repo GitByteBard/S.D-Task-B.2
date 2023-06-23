@@ -122,3 +122,66 @@ textarea {
   transition-duration: 2s;
   transform: scale(1.3);
 }
+
+.animation_css {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* Contact page */
+
+@media only screen and (max-width: 400px) {
+  li.selected-link {
+    width: 70%;
+  }
+  .page-container {
+    padding: 0.5em;
+  }
+  .navigation li {
+    text-align: center;
+    width: 95%;
+  }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation a {
+    padding: 0.5em;
+  }
+
+  .cat video {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+}
