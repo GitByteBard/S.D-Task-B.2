@@ -27,10 +27,59 @@
       We make bespoke balloons of all shapes and sizes, for all occasions and
       purposes.
     </p>
-    <p>
-      From <em>helium-filled party balloons</em> to <em>hot-air balloons</em>,
-      we have it covered. So, whether you are celebrating a birthday or flying
-      across the channel, give us a call!
-    </p>
+    <p>Worker</p>
+    <title>Web Worker Calculator</title>
+  </head>
+  <body>
+    <h1>Сохранение данных в локальном хранилище</h1>
+    <div class="form-container">
+      <label for="firstName">Имя:</label>
+      <input type="text" id="firstName">
+    
+      <label for="lastName">Фамилия:</label>
+      <input type="text" id="lastName">
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+    </div>
+    <div class="button_lockal">
+      <button id="saveButton">Сохранить</button>
+    </div>
+    
+<script src="/JS/local_storage.js"></script>
+
+    <h1>Web Worker Calculator</h1>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" />
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" />
+    <br>
+    <label for="operator">Operator:</label>
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="">*</option>
+      <option value="/">/</option>
+    </select>
+    <br>
+    <button onclick="calculate()">Calculate</button>
+    <br>
+    <div id="result"></div>
+  
+    <script>
+      function calculate() {
+        var num1 = parseInt(document.getElementById('num1').value);
+        var num2 = parseInt(document.getElementById('num2').value);
+        var operator = document.getElementById('operator').value;
+  
+        var worker = new Worker('../JS/worker.js');
+        worker.postMessage({ num1: num1, num2: num2, operator: operator });
+  
+        worker.onmessage = function(event) {
+          document.getElementById('result').textContent = event.data;
+        };
+      }
+    </script>
   </body>
 </html>

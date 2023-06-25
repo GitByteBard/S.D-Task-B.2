@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/style.css" />
+    <script src="http://maps.google.com/maps/api/js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -27,10 +28,61 @@
       We make bespoke balloons of all shapes and sizes, for all occasions and
       purposes.
     </p>
-    <p>
-      From <em>helium-filled party balloons</em> to <em>hot-air balloons</em>,
-      we have it covered. So, whether you are celebrating a birthday or flying
-      across the channel, give us a call!
+
+    <p id="para">
+      Нажмите кнопку, чтобы получить ваше местоположение.
+
+      <button class="loc" onclick="getLocation()">
+        Press to find your Lokation
+      </button>
     </p>
+    <div></div>
+    <div id="googleMap"></div>
+
+    <script>
+      var x = document.getElementById("para");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Геолокация не поддерживается этим браузером.";
+        }
+      }
+
+      function showPosition(position) {
+        //вывод координат в элемент с id "para"
+        x.innerHTML =
+          "Широта: " +
+          position.coords.latitude +
+          "<br>Долгота: " +
+          position.coords.longitude;
+
+        //Добавление маркера на карту
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        var latlon = new google.maps.LatLng(lat, lon);
+
+        var myOptions = {
+          zoom: 14,
+          center: latlon,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          mapTypeControl: false,
+          navigationControlOptions: {
+            style: google.maps.NavigationControlStyle.SMALL,
+          },
+        };
+
+        //новая карта и маркер
+        var map = new google.maps.Map(
+          document.getElementById("googleMap"),
+          myOptions
+        );
+        var marker = new google.maps.Marker({
+          position: latlon,
+          map: map, //добавление маркера на карту
+          title: "Вы здесь!",
+        });
+      }
+    </script>
   </body>
 </html>
