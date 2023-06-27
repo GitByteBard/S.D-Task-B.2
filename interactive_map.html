@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/style.css" />
-    <script src="http://maps.google.com/maps/api/js"></script>
+
     <title>Document</title>
   </head>
   <body>
@@ -29,38 +29,35 @@
       purposes.
     </p>
 
-    <p id="para">
-      Нажмите кнопку, чтобы получить ваше местоположение.
-
-      <button class="loc" onclick="getLocation()">
-        Press to find your Lokation
-      </button>
-    </p>
-    <div></div>
+    <p id="para">Click the button to get your position.</p>
+    <!--changes to show lon/lat-->
+    <button class="loc" onclick="getLocation()">
+      Press to see the map and location
+    </button>
     <div id="googleMap"></div>
-
+    <script src="http://maps.google.com/maps/api/js"></script>
     <script>
       var x = document.getElementById("para");
       function getLocation() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition);
         } else {
-          x.innerHTML = "Геолокация не поддерживается этим браузером.";
+          x.innerHTML = "Geolocation is not supported by this browser.";
         }
       }
 
       function showPosition(position) {
-        //вывод координат в элемент с id "para"
+        //returns the coords to para assigned to x
         x.innerHTML =
-          "Широта: " +
+          "Latitude: " +
           position.coords.latitude +
-          "<br>Долгота: " +
+          "<br>Longitude: " +
           position.coords.longitude;
 
-        //Добавление маркера на карту
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        var latlon = new google.maps.LatLng(lat, lon);
+        //Add marker to map
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
+        latlon = new google.maps.LatLng(lat, lon);
 
         var myOptions = {
           zoom: 14,
@@ -72,15 +69,15 @@
           },
         };
 
-        //новая карта и маркер
+        //new map and marker
         var map = new google.maps.Map(
           document.getElementById("googleMap"),
           myOptions
         );
         var marker = new google.maps.Marker({
           position: latlon,
-          map: map, //добавление маркера на карту
-          title: "Вы здесь!",
+          map: map, //add marker to map
+          title: "You are here!",
         });
       }
     </script>
