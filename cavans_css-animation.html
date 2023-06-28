@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Canvas</h1>
+    <h1>Canvas & CSS</h1>
     <ul class="navigation">
       <li><a href="index.html">About Me</a></li>
       <li><a href="interactive_map.html">Interactive map</a></li>
@@ -20,28 +20,50 @@
       <li><a href="chat.html">Chat</a></li>
       <li><a href="/contact_page.html">Contact Page</a></li>
     </ul>
-
-    <div class="grid">
-      <div class="canvas">
-        <canvas id="myCanvas" width="400" height="400"></canvas>
-      </div>
-      <div class="css-animation">
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
-      </div>
-    </div>
-
     <h2>What We Do</h2>
 
-    <p>
-      We make bespoke balloons of all shapes and sizes, for all occasions and
-      purposes.
+    <p class="animation_css">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+      nostrum voluptate distinctio ullam accusamus quisquam explicabo
+      laudantium. Deserunt iure sint ipsum, laboriosam quos dolores pariatur
+      cumque doloremque nihil veritatis fuga.
     </p>
+
+    <div class="grid">
+      <div class="cnv-head"><p>Canvas Example</p></div>
+      <div class="canvas">
+        <canvas id="myCanvas" width="350" height="350"></canvas>
+      </div>
+      <div class="cnv-text">
+        <p>
+          The main purpose of the provided code is to animate a ball bouncing
+          inside a square on an HTML canvas. The code initializes the canvas,
+          sets up the necessary variables, defines functions for drawing the
+          square and the ball, updates the ball's position and color, and
+          creates the animation loop.
+        </p>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="css-head"><p>CSS Animation Example</p></div>
+      <div class="box">
+        <div class="css-animation">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+        </div>
+      </div>
+      <div class="css-text">
+        This animation consists of a set of balls that move horizontally left
+        and right. Each ball has a white color and a repetitive animation
+        applied to it, which changes their position using the CSS transform
+        property with translate. The animation loops infinitely with different
+        durations for each ball.
+      </div>
+    </div>
     <script src="/JS/canvas.js"></script>
   </body>
 </html>

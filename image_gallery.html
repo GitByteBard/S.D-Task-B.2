@@ -26,55 +26,71 @@
       We make bespoke balloons of all shapes and sizes, for all occasions and
       purposes.
     </p>
-    <h2>Gallery example</h2>
-    <div class="container">
-      <div class="full-img">
-        <img class="displayed-img" src="/images/galery_images/pic1.jpg" />
-        <div class="overlay"></div>
-        <button class="dark">Darken</button>
+    <div class="gallery_hdr">
+      <h2>Gallery example</h2>
+    </div>
+    <div class="gallery_wrapper">
+      <div class="container">
+        <div class="full-img">
+          <img class="displayed-img" src="/images/galery_images/pic1.jpg" />
+          <div class="overlay"></div>
+          <button class="dark">Darken</button>
+        </div>
+        <div class="thumb-bar"></div>
       </div>
-
-      <div class="thumb-bar"></div>
       <script src="/JS/image_galery.js"></script>
+    </div>
+    <div class="gallery_des">
+      <p>
+        The code creates an image gallery with a button that allows adjusting
+        the brightness of the displayed image. It uses JavaScript to handle
+        events and modify the properties of elements on the page. When an image
+        in the gallery is clicked, it is displayed in the main window. The
+        "Darken" button changes its class, text, and also modifies the
+        background transparency and opacity of the displayed image, creating a
+        brightness adjustment effect.
+      </p>
     </div>
     <br />
     <br />
     <br />
     <br />
     <h2>IMG map example</h2>
-    <div class="container">
-      <div class="mapmap">
-        <img
-          src="/images/img_map/planets.png"
-          alt="Workplace"
-          usemap="#workmap"
-        />
-        <map name="workmap">
-          <area
-            shape="circle"
-            coords="77, 173, 42"
-            alt="Mercury"
-            href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+    <div class="map_wrapper">
+      <div class="container">
+        <div class="mapmap">
+          <img
+            src="/images/img_map/planets.png"
+            alt="Workplace"
+            usemap="#workmap"
           />
-          <area
-            shape="circle"
-            coords="228, 173, 96"
-            alt="Venus"
-            href="https://en.wikipedia.org/wiki/Venus"
-          />
-          <area
-            shape="circle"
-            coords="437, 173, 97.5"
-            alt="Earth"
-            href="https://en.wikipedia.org/wiki/Earth"
-          />
-          <area
-            shape="circle"
-            coords="603, 169, 55"
-            alt="Mars"
-            href="https://en.wikipedia.org/wiki/Mars"
-          />
-        </map>
+          <map name="workmap">
+            <area
+              shape="circle"
+              coords="77, 173, 42"
+              alt="Mercury"
+              href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+            />
+            <area
+              shape="circle"
+              coords="228, 173, 96"
+              alt="Venus"
+              href="https://en.wikipedia.org/wiki/Venus"
+            />
+            <area
+              shape="circle"
+              coords="437, 173, 97.5"
+              alt="Earth"
+              href="https://en.wikipedia.org/wiki/Earth"
+            />
+            <area
+              shape="circle"
+              coords="603, 169, 55"
+              alt="Mars"
+              href="https://en.wikipedia.org/wiki/Mars"
+            />
+          </map>
+        </div>
       </div>
     </div>
   </body>
